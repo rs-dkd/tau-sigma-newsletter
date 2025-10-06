@@ -3,40 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tau Sigma Delta Chapter Newsletter - August 2025</title>
+<title>Tau Sigma Delta Chapter Newsletter - October 2025</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 * {margin:0;padding:0;box-sizing:border-box}
-body {font-family:'Georgia',serif;line-height:1.6;color:#333;background:linear-gradient(135deg,#f9f9f9 0%,#e8e8e8 100%)}
+body {font-family:'Georgia',serif;line-height:1.6;color:#333;background:linear-gradient(135deg,#f9f9f9 0%,#e8e8e8 100%);animation:fadeIn 0.8s ease-in}
+@keyframes fadeIn {from{opacity:0}to{opacity:1}}
 .container {max-width:1200px;margin:2rem auto;background:#fff;box-shadow:0 0 30px rgba(0,0,0,0.15);border-radius:15px;overflow:hidden}
-.banner img {width:100%;display:block;border-bottom:6px solid #8B0000}
+.banner {position:relative;overflow:hidden}
+.banner img {width:100%;display:block;border-bottom:6px solid #8B0000;transition:transform 0.3s ease}
+.banner:hover img {transform:scale(1.02)}
+.banner::after {content:'October 2025';position:absolute;bottom:20px;right:30px;background:rgba(139,0,0,0.9);color:#fff;padding:0.8rem 1.5rem;border-radius:30px;font-size:1.2rem;font-weight:bold;box-shadow:0 4px 15px rgba(0,0,0,0.3);animation:slideIn 0.6s ease-out}
+@keyframes slideIn {from{transform:translateX(100px);opacity:0}to{transform:translateX(0);opacity:1}}
 .main-content {display:grid;grid-template-columns:2fr 1fr;gap:2rem;padding:2rem}
 .left-column,.right-column {display:flex;flex-direction:column;gap:2rem}
-.section {background:#fff;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,0.1);overflow:hidden;transition:.3s}
+.section {background:#fff;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,0.1);overflow:hidden;transition:all 0.3s ease;animation:slideUp 0.6s ease-out}
+@keyframes slideUp {from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
 .section:hover {transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,0.15)}
-.section-header {background:linear-gradient(135deg,#8B0000,#DC143C);color:#fff;padding:1.5rem 2rem;position:relative}
+.section-header {background:linear-gradient(135deg,#8B0000,#DC143C);color:#fff;padding:1.5rem 2rem;position:relative;overflow:hidden}
+.section-header::before {content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:left 0.5s ease}
+.section:hover .section-header::before {left:100%}
 .section-header::after {content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#FFD700,#FFA500,#FF6B6B)}
-.section-title {font-size:1.8rem;margin:0;text-shadow:1px 1px 2px rgba(0,0,0,0.3)}
+.section-title {font-size:1.8rem;margin:0;text-shadow:1px 1px 2px rgba(0,0,0,0.3);display:flex;align-items:center;gap:0.5rem}
+.section-title i {font-size:1.5rem}
 .section-content {padding:2rem}
-.event {margin-bottom:2rem}
-.event strong {color:#8B0000}
-.feature-callout {background:linear-gradient(135deg,#fff3cd,#ffeaa7);border-radius:15px;padding:2rem;border:2px solid #ffc107;position:relative}
-.volunteer-signup {background:linear-gradient(135deg,#d4edda,#a3d5a6);border-radius:15px;padding:2rem;border:2px solid #28a745;text-align:center}
-.social-links {display:flex;justify-content:center;gap:1.5rem;margin-top:1.5rem}
-.social-btn {width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;transition:.3s;box-shadow:0 4px 15px rgba(0,0,0,0.2)}
+.event {margin-bottom:1.5rem;padding:1rem;background:linear-gradient(135deg,#fafafa,#ffffff);border-radius:10px;border-left:4px solid #8B0000;transition:all 0.3s ease}
+.event:hover {background:linear-gradient(135deg,#fff5f5,#ffffff);transform:translateX(5px);box-shadow:0 4px 15px rgba(139,0,0,0.1)}
+.event strong {color:#8B0000;font-size:1.1rem;display:block;margin-bottom:0.3rem}
+.event p {font-size:0.95rem;line-height:1.5;margin-bottom:0.5rem}
+.event-icon {display:inline-block;width:30px;height:30px;background:linear-gradient(135deg,#8B0000,#DC143C);color:#fff;border-radius:50%;text-align:center;line-height:30px;margin-right:0.5rem;box-shadow:0 2px 8px rgba(139,0,0,0.3);font-size:0.85rem}
+.special-guest {background:linear-gradient(135deg,#fff3e0,#ffe0b2);padding:0.7rem;border-radius:8px;margin:0.5rem 0;border-left:4px solid #ff9800;font-size:0.9rem}
+.special-guest strong {color:#e65100}
+.feature-callout {background:linear-gradient(135deg,#fff3cd,#ffeaa7);border-radius:15px;padding:1.5rem;border:2px solid #ffc107;position:relative;overflow:hidden}
+.feature-callout::before {content:'✨';position:absolute;top:10px;right:10px;font-size:2rem;opacity:0.3}
+.volunteer-signup {background:linear-gradient(135deg,#d4edda,#a3d5a6);border-radius:15px;padding:1.5rem;border:2px solid #28a745;text-align:center;position:relative;overflow:hidden}
+.volunteer-signup::before {content:'🌟';position:absolute;top:10px;right:10px;font-size:2rem;opacity:0.3}
+.congrats-box {background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:15px;padding:1.5rem;border:2px solid #2196f3;text-align:center;position:relative;overflow:hidden}
+.congrats-box::before {content:'🎉';position:absolute;top:10px;right:10px;font-size:2.5rem;opacity:0.3}
+.congrats-box::after {content:'🎓';position:absolute;bottom:10px;left:10px;font-size:2.5rem;opacity:0.3}
+.social-links {display:flex;justify-content:center;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
+.social-btn {width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(0,0,0,0.2);position:relative}
+.social-btn::before {content:'';position:absolute;width:100%;height:100%;border-radius:50%;background:inherit;z-index:-1;transition:transform 0.3s ease}
 .social-btn:hover {transform:translateY(-5px) scale(1.1);box-shadow:0 8px 25px rgba(0,0,0,0.3)}
+.social-btn:hover::before {transform:scale(1.2);opacity:0.5}
 .instagram {background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
 .facebook {background:#4267B2}
 .groupme {background:#00AFF0}
 .discord {background:#5865F2}
-.footer {background:linear-gradient(135deg,#2c3e50,#34495e);color:#fff;text-align:center;padding:2rem;margin-top:2rem}
-@media(max-width:768px){.main-content{grid-template-columns:1fr;padding:1rem}}
-/* restore button styles */
-.btn-group {display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
-.btn {background:#fff;color:#8B0000;padding:1rem 2rem;border:none;border-radius:50px;
-     text-decoration:none;font-weight:bold;cursor:pointer;display:inline-flex;align-items:center;
-     gap:.5rem;box-shadow:0 4px 15px rgba(0,0,0,0.2);font-size:1rem;transition:.3s}
+.footer {background:linear-gradient(135deg,#2c3e50,#34495e);color:#fff;text-align:center;padding:2rem;margin-top:2rem;position:relative}
+.footer::before {content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#FFD700,#FFA500,#FF6B6B,#8B0000)}
+.btn-group {display:flex;gap:0.7rem;justify-content:center;flex-wrap:wrap;margin-top:0.7rem}
+.btn {background:#fff;color:#8B0000;padding:0.7rem 1.3rem;border:none;border-radius:50px;text-decoration:none;font-weight:bold;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;box-shadow:0 4px 15px rgba(0,0,0,0.2);font-size:0.9rem;transition:all 0.3s ease;position:relative;overflow:hidden}
+.btn::before {content:'';position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;background:rgba(139,0,0,0.1);transition:width 0.4s ease,height 0.4s ease;transform:translate(-50%,-50%)}
+.btn:hover::before {width:300px;height:300px}
 .btn:hover {background:#f0f0f0;transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,0.3)}
+.highlight-new {position:relative}
+.highlight-new::after {content:'NEW';position:absolute;top:-8px;right:-8px;background:#ff4444;color:#fff;padding:0.15rem 0.5rem;border-radius:12px;font-size:0.65rem;font-weight:bold;box-shadow:0 2px 8px rgba(255,68,68,0.4);animation:pulse 2s infinite}
+@keyframes pulse {0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@media(max-width:768px){.main-content{grid-template-columns:1fr;padding:1rem}.banner::after{font-size:1rem;padding:0.5rem 1rem}}
 </style>
 </head>
 <body>
@@ -50,124 +74,164 @@ body {font-family:'Georgia',serif;line-height:1.6;color:#333;background:linear-g
 
 <!-- Announcements -->
 <div class="section">
-<div class="section-header"><h2 class="section-title">Announcements</h2></div>
+<div class="section-header"><h2 class="section-title"><i class="fas fa-bullhorn"></i> Announcements</h2></div>
 <div class="section-content">
-<p>🎉 We’re excited to announce our new <strong>Tau Sigma Discord Server</strong>! Join us for real-time updates, networking, and casual community chats.</p>
-<div style="text-align:center;margin-top:1rem">
-<a href="https://discord.gg/6sVC3qghUt" target="_blank" class="btn" style="background:#5865F2;color:#fff"><i class="fab fa-discord"></i> Join Our Discord</a>
+<div class="congrats-box">
+<h3 style="color:#1976d2;font-size:1.4rem;margin-bottom:0.8rem">🎊 Congratulations to Our New Inductees! 🎊</h3>
+<p style="font-size:1rem;line-height:1.7">We are thrilled to welcome our newest members to the Tau Sigma Delta Chapter! Your dedication to academic excellence and commitment to our community inspire us all. Welcome to the family!</p>
+<p style="margin-top:1rem;font-style:italic;color:#555;font-size:0.95rem">"Together we rise, together we thrive."</p>
 </div>
 </div>
 </div>
 
 <!-- Upcoming Events -->
 <div class="section">
-  <div class="section-header"><h2 class="section-title">Upcoming Events</h2></div>
+  <div class="section-header"><h2 class="section-title"><i class="fas fa-calendar-star"></i> Upcoming Events</h2></div>
   <div class="section-content">
 
-    <!-- Event 1 -->
-    <div class="event">
-      <p><strong>“Get to Know Tau Sigma” Session</strong><br>
-      📅 September 12, 6:00 PM (Zoom)<br>
-      <em>Description:</em> This is an informational session designed for prospective new members to learn more about Tau Sigma Delta, meet current members, and ask questions.<br>
+    <!-- Event 1: Induction Ceremony -->
+    <div class="event highlight-new">
+      <p><span class="event-icon"><i class="fas fa-award"></i></span><strong>Induction Ceremony</strong></p>
+      <p>📅 Monday, October 6, 5:00 PM | 📍 Ocora Hall<br>
+      <em>For new members only.</em> Volunteer opportunities available.</p>
       <div class="btn-group">
-        <a href="https://ufl.zoom.us/j/92208247345" target="_blank" class="btn"><i class="fa-solid fa-video"></i> Join Zoom</a>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Get+to+Know+Tau+Sigma&dates=20250912T220000Z/20250912T230000Z&details=Join+Tau+Sigma+on+Zoom:+https://ufl.zoom.us/j/92208247345&location=Zoom" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Add to Calendar</a>
+        <a href="https://forms.gle/gFx8GZxYHYAPNMGM9" target="_blank" class="btn"><i class="fas fa-hand-paper"></i> Volunteer</a>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Tau+Sigma+Induction+Ceremony&dates=20251006T210000Z/20251006T220000Z&details=Induction+ceremony+for+new+members+at+Ocora+Hall&location=Ocora+Hall" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Calendar</a>
       </div>
     </div>
 
-    <!-- Event 2 -->
-    <div class="event">
-      <p><strong>Networking 101</strong><br>
-      📅 September 22, 6:30 PM (Ocora Hall/Zoom)<br>
-      <em>Description:</em> Build confidence and sharpen your professional communication skills. This workshop will cover strategies for starting conversations, making meaningful connections, and following up effectively in academic and professional settings.</p>
+    <!-- Event 2: Destress Workshop -->
+    <div class="event highlight-new">
+      <p><span class="event-icon"><i class="fas fa-spa"></i></span><strong>Destress Workshop: System Reset</strong></p>
+      <p>📅 Tuesday, October 7, 6:00 – 6:45 PM | 📍 Zoom</p>
+      <div class="special-guest">
+        <p>🌟 <strong>Special Guest: Sophie Trudeau, LCSW</strong></p>
+      </div>
+      <p><em>Learn to use your nervous system to promote emotional balance and manage stress effectively.</em></p>
       <div class="btn-group">
-        <a href="https://ufl.zoom.us/j/94980117267" target="_blank" class="btn"><i class="fa-solid fa-video"></i> Join Zoom</a>
-        <a href="https://forms.gle/bnGp74a1TafimCw5A" target="_blank" class="btn"><i class="fa-regular fa-envelope"></i> RSVP Now</a>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+101&dates=20250922T223000Z/20250922T233000Z&details=Join+Networking+101+in-person+at+Ocora+Hall+or+on+Zoom:+https://ufl.zoom.us/j/94980117267&location=Ocora+Hall/Zoom" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Add to Calendar</a>
+        <a href="https://ufl.zoom.us/j/97582680308" target="_blank" class="btn"><i class="fa-solid fa-video"></i> Zoom</a>
+        <a href="https://forms.gle/jQiyQKer6QYKvzuh6" target="_blank" class="btn"><i class="fa-regular fa-envelope"></i> RSVP</a>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Destress+Workshop+System+Reset&dates=20251007T220000Z/20251007T224500Z&details=Workshop+with+Sophie+Trudeau,+LCSW+on+Zoom:+https://ufl.zoom.us/j/97582680308&location=Zoom" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Calendar</a>
       </div>
     </div>
 
-    <!-- Event 3 -->
-    <div class="event">
-      <p><strong>Destress Workshop: System Reset</strong><br>
-      📅 October 7, 6:00 – 6:45 PM (Zoom)<br>
-      🌟 Special Guest: <strong>Sophie Trudeau, LCSW</strong><br>
-      <p><em>Description:</em> Learn how to use your nervous system to promote emotional balance, respond effectively to stress, and reach your highest potential.</p>
+    <!-- Event 3: IWP Graduate Fair -->
+    <div class="event highlight-new">
+      <p><span class="event-icon"><i class="fas fa-graduation-cap"></i></span><strong>Institute of World Politics - Graduate Fair</strong></p>
+      <p>📅 Tuesday, October 15, 10:00 AM – 2:00 PM<br>
+      📍 Reitz Union Grand Ballroom & Rion Ballroom<br>
+      <em>Meet Jennifer Alexander from IWP. Learn about graduate opportunities in intelligence, diplomacy, and strategic studies.</em></p>
       <div class="btn-group">
-        <a href="https://ufl.zoom.us/j/97582680308" target="_blank" class="btn"><i class="fa-solid fa-video"></i> Join Zoom</a>
-        <a href="https://forms.gle/jQiyQKer6QYKvzuh6" target="_blank" class="btn"><i class="fa-regular fa-envelope"></i> RSVP Now</a>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Destress+Workshop+System+Reset&dates=20251007T220000Z/20251007T224500Z&details=Workshop+with+Sophie+Trudeau,+LCSW+on+Zoom:+https://ufl.zoom.us/j/97582680308&location=Zoom" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Add to Calendar</a>
+        <a href="https://iwp.edu" target="_blank" class="btn"><i class="fas fa-globe"></i> IWP Website</a>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=IWP+Graduate+Fair&dates=20251015T140000Z/20251015T180000Z&details=Institute+of+World+Politics+Graduate+Fair+at+Reitz+Union&location=Reitz+Union+Grand+Ballroom" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Calendar</a>
+      </div>
+    </div>
+
+    <!-- Event 4: IWP Special Event -->
+    <div class="event highlight-new">
+      <p><span class="event-icon"><i class="fas fa-users"></i></span><strong>U.S. – China Relations: Diplomacy in Strategic Competition</strong></p>
+      <p>📅 Tuesday, October 15, 5:00 – 7:00 PM<br>
+      🎤 Speaker: Henrietta Levin | 📍 Reitz Union Auditorium<br>
+      <em>Insightful discussion on contemporary U.S.-China relations and modern diplomacy.</em></p>
+      <div class="btn-group">
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=US+China+Relations+Diplomacy+Event&dates=20251015T210000Z/20251015T230000Z&details=Speaker+Henrietta+Levin+discussing+US-China+relations+at+Reitz+Union&location=Reitz+Union+Auditorium" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Calendar</a>
+      </div>
+    </div>
+
+    <!-- Event 5: Homecoming Festival -->
+    <div class="event highlight-new">
+      <p><span class="event-icon"><i class="fas fa-flag"></i></span><strong>UF Homecoming Festival – Volunteers Needed</strong></p>
+      <p>📅 Friday, October 17, 9:00 AM – 12:00 PM | 📍 Plaza of the Americas<br>
+      <em>Help represent Tau Sigma! Set up a tent and lead kid-friendly activities.</em></p>
+      <div class="btn-group">
+        <a href="https://forms.gle/TmpdPwqTobytDfBx8" target="_blank" class="btn"><i class="fas fa-hand-paper"></i> Sign Up</a>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=UF+Homecoming+Festival+Volunteer&dates=20251017T130000Z/20251017T160000Z&details=Volunteer+with+Tau+Sigma+at+the+Homecoming+Festival&location=Plaza+of+the+Americas" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Calendar</a>
+      </div>
+    </div>
+
+    <!-- Event 6: Homecoming Parade -->
+    <div class="event highlight-new">
+      <p><span class="event-icon"><i class="fas fa-trophy"></i></span><strong>2025 UF Homecoming Parade</strong></p>
+      <p>📅 Friday, October 17, 12:00 PM (rain or shine)<br>
+      🕐 Staging: 6:45 AM | 💻 Mandatory Zoom: Oct 9, 7:00 PM<br>
+      <em>Show your chapter pride! Details sent Oct 8.</em></p>
+      <div class="btn-group">
+        <a href="https://forms.gle/fALiw7qT6raJ4hHn8" target="_blank" class="btn"><i class="fas fa-clipboard-list"></i> Participate</a>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=UF+Homecoming+Parade&dates=20251017T160000Z/20251017T180000Z&details=Tau+Sigma+participation+in+UF+Homecoming+Parade&location=UF+Campus" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Calendar</a>
+      </div>
+    </div>
+
+    <!-- Event 7: Virtual Vision Board Workshop -->
+    <div class="event highlight-new">
+      <p><span class="event-icon"><i class="fas fa-lightbulb"></i></span><strong>Virtual Vision Board Workshop</strong></p>
+      <p>📅 Monday, October 27, 6:00 PM | 📍 Ocora Hall / Zoom<br>
+      💻 Bring your laptop | 🍕 Snacks provided!<br>
+      <em>Create a digital vision board to map out your goals and aspirations.</em></p>
+      <div class="btn-group">
+        <a href="https://ufl.zoom.us/j/93551602678" target="_blank" class="btn"><i class="fa-solid fa-video"></i> Zoom</a>
+        <a href="https://forms.gle/3SFaMQmbSbKNxSsS9" target="_blank" class="btn"><i class="fa-regular fa-envelope"></i> RSVP</a>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Virtual+Vision+Board+Workshop&dates=20251027T220000Z/20251027T230000Z&details=Virtual+Vision+Board+Night+at+Ocora+Hall+or+Zoom:+https://ufl.zoom.us/j/93551602678.+Bring+your+laptop!&location=Ocora+Hall/Zoom" target="_blank" class="btn"><i class="fa-regular fa-calendar"></i> Calendar</a>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- Tau Sigma Voices Spotlight -->
-<div class="section">
-<div class="section-header"><h2 class="section-title">Tau Sigma Voices Spotlight</h2></div>
-<div class="section-content">
-<h3 style="color:#8B0000">GRAY MATTER</h3>
-<p><em>By Samantha D'Giff</em></p>
-<p>Are you familiar with the phrase, “The eyes are the window to the soul”? … The ambiguity of the authorship has produced a trifecta of notable prospects including Shakespeare, Da Vinci and Cicero, and thus remains a gray matter...</p>
-<p><strong>Highlights:</strong></p>
-<ul>
-<li>Impact of screen time on brain health</li>
-<li>Practical steps to reduce digital strain</li>
-<li>Encouragement for mindful, present living</li>
-</ul>
-<p><a href="gray-matter.pdf" style="color:#8B0000;text-decoration:underline">Read the full piece in this issue →</a></p>
-</div>
-</div>
-
 </div>
 
 <div class="right-column">
 
-<!-- Contact -->
+<!-- Tau Sigma Voices Spotlight -->
 <div class="section">
-<div class="section-header"><h2 class="section-title">Contact Us</h2></div>
-<div class="section-content" style="text-align:center">
-<p><i class="fa-regular fa-envelope"></i> <a href="mailto:aprovost@ufl.edu" style="color:#1976d2;text-decoration:none">aprovost@ufl.edu</a></p>
-<p><i class="fa-regular fa-envelope"></i> <a href="mailto:kalininam@ufl.edu" style="color:#1976d2;text-decoration:none">kalininam@ufl.edu</a></p>
-<p><i class="fa-solid fa-building-columns"></i> Tau Sigma Delta Chapter</p>
+<div class="section-header"><h2 class="section-title"><i class="fas fa-microphone"></i> Tau Sigma Voices</h2></div>
+<div class="section-content">
+<h3 style="color:#8B0000;font-size:1.3rem;margin-bottom:0.4rem">GRAY MATTER</h3>
+<p style="font-style:italic;color:#666;margin-bottom:0.8rem;font-size:0.95rem">By Samantha D'Giff</p>
+<p style="line-height:1.7;font-size:0.95rem">Are you familiar with the phrase, "The eyes are the window to the soul"? … The ambiguity of the authorship has produced a trifecta of notable prospects including Shakespeare, Da Vinci and Cicero, and thus remains a gray matter...</p>
+<p style="margin-top:1.2rem"><strong style="color:#8B0000;font-size:0.95rem">Highlights:</strong></p>
+<ul style="margin:0.8rem 0 1.2rem 1.5rem;line-height:1.7;font-size:0.9rem">
+<li>Impact of screen time on brain health</li>
+<li>Practical steps to reduce digital strain</li>
+<li>Encouragement for mindful, present living</li>
+</ul>
+<p><a href="gray-matter.pdf" style="color:#8B0000;text-decoration:none;font-weight:bold;display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9rem"><i class="fas fa-file-pdf"></i> Read the full piece →</a></p>
 </div>
 </div>
 
 <!-- Volunteering -->
 <div class="section">
-<div class="section-header"><h2 class="section-title">Community Impact</h2></div>
+<div class="section-header"><h2 class="section-title"><i class="fas fa-hands-helping"></i> Community Impact</h2></div>
 <div class="section-content">
 <div class="volunteer-signup">
-<h3 style="color:#28a745">Join Our Volunteering Initiative</h3>
-<p>Make a positive impact in our community! Join fellow Tau Sigma members in service opportunities throughout the year.</p>
-<a href="https://forms.gle/gFx8GZxYHYAPNMGM9" target="_blank" class="btn" style="background:#28a745;color:#fff;margin-top:1rem"><i class="fa-solid fa-hands-helping"></i> I'm Interested!</a>
+<h3 style="color:#28a745;font-size:1.3rem;margin-bottom:0.8rem">Join Our Volunteering Initiative</h3>
+<p style="line-height:1.7;font-size:0.95rem">Make a positive impact in our community! Join fellow Tau Sigma members in service opportunities throughout the year.</p>
+<a href="https://forms.gle/gFx8GZxYHYAPNMGM9" target="_blank" class="btn" style="background:#28a745;color:#fff;margin-top:1.2rem"><i class="fa-solid fa-hands-helping"></i> I'm Interested!</a>
 </div>
 </div>
 </div>
 
 <!-- Social Links -->
 <div class="section">
-<div class="section-header"><h2 class="section-title">Stay Connected</h2></div>
+<div class="section-header"><h2 class="section-title"><i class="fas fa-share-alt"></i> Stay Connected</h2></div>
 <div class="section-content">
-<p style="text-align:center">Follow us for updates and events</p>
+<p style="text-align:center;margin-bottom:1rem;color:#666;font-size:0.95rem">Follow us for updates and events</p>
 <div class="social-links">
-<a href="https://www.instagram.com/floridatausigma/" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/floridatausigma/" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
-<a href="https://groupme.com/join_group/90162141/HaPfWeSp" target="_blank" class="social-btn groupme"><i class="fas fa-comments"></i></a>
-<a href="https://discord.gg/6sVC3qghUt" target="_blank" class="social-btn discord"><i class="fab fa-discord"></i></a>
+<a href="https://www.instagram.com/floridatausigma/" target="_blank" class="social-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/floridatausigma/" target="_blank" class="social-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://groupme.com/join_group/90162141/HaPfWeSp" target="_blank" class="social-btn groupme" title="GroupMe"><i class="fas fa-comments"></i></a>
+<a href="https://discord.gg/6sVC3qghUt" target="_blank" class="social-btn discord" title="Discord"><i class="fab fa-discord"></i></a>
 </div>
 </div>
 </div>
 
-<!-- Share Your Voice (moved here) -->
+<!-- Share Your Voice -->
 <div class="section">
-<div class="section-header"><h2 class="section-title">Share Your Voice</h2></div>
+<div class="section-header"><h2 class="section-title"><i class="fas fa-pen-fancy"></i> Share Your Voice</h2></div>
 <div class="section-content">
 <div class="feature-callout">
-<h3 style="color:#8B0000">Want to be Featured?</h3>
-<p><strong>Submit your work for Tau Sigma Voices!</strong></p>
-<ul style="margin:1.5rem 0;padding-left:1.2rem;line-height:1.8">
+<h3 style="color:#8B0000;font-size:1.3rem;margin-bottom:0.8rem">Want to be Featured?</h3>
+<p style="font-weight:bold;font-size:1rem;margin-bottom:0.8rem">Submit your work for Tau Sigma Voices!</p>
+<ul style="margin:1.2rem 0;padding-left:1.2rem;line-height:1.7;font-size:0.95rem">
 <li>Poetry & Creative Writing</li>
 <li>Academic Work & Achievements</li>
 <li>Ideas & Insights</li>
@@ -180,15 +244,25 @@ body {font-family:'Georgia',serif;line-height:1.6;color:#333;background:linear-g
 </div>
 </div>
 
+<!-- Contact -->
+<div class="section">
+<div class="section-header"><h2 class="section-title"><i class="fas fa-envelope"></i> Contact Us</h2></div>
+<div class="section-content" style="text-align:center">
+<p style="margin-bottom:1rem;font-size:0.95rem"><i class="fa-regular fa-envelope" style="color:#8B0000"></i> <a href="mailto:aprovost@ufl.edu" style="color:#1976d2;text-decoration:none;font-weight:bold">aprovost@ufl.edu</a></p>
+<p style="margin-bottom:1rem;font-size:0.95rem"><i class="fa-regular fa-envelope" style="color:#8B0000"></i> <a href="mailto:kalininam@ufl.edu" style="color:#1976d2;text-decoration:none;font-weight:bold">kalininam@ufl.edu</a></p>
+<p style="color:#666;font-size:0.95rem"><i class="fa-solid fa-building-columns" style="color:#8B0000"></i> Tau Sigma Delta Chapter</p>
+</div>
+</div>
+
 </div>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-<p><strong>Tau Sigma Delta Chapter</strong></p>
-<p>Recognizing Academic Excellence in Transfer Students</p>
-<p style="margin-top:1rem;font-size:.9rem;opacity:.8">Contact us: aprovost@ufl.edu | kalininam@ufl.edu</p>
-<p style="margin-top:.5rem;font-size:.8rem;opacity:.7">This newsletter was created with ❤️ for our amazing community</p>
+<p style="font-size:1.3rem;font-weight:bold;margin-bottom:0.5rem">Tau Sigma Delta Chapter</p>
+<p style="font-size:1.1rem">Recognizing Academic Excellence in Transfer Students</p>
+<p style="margin-top:1.5rem;font-size:.9rem;opacity:.8">Contact us: aprovost@ufl.edu | kalininam@ufl.edu</p>
+<p style="margin-top:.8rem;font-size:.85rem;opacity:.7">This newsletter was created with ❤️ for our amazing community</p>
 </div>
 
 </div>
